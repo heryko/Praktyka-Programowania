@@ -13,14 +13,14 @@ class TestStringCalculator(unittest.TestCase):
         self.assertEqual(Add("1,2"), 3)
 
     def test_multiple_numbers(self):
-        self.assertEqual(Add("1,2,3,4,5"), 15)
+        self.assertEqual(Add("1,2,4,4,5"), 15)
 
     def test_value_error_on_invalid_input(self):
         with self.assertRaises(ValueError):
-            Add("1,nie_liczba,3")
+            Add("1,nie_liczba,4")
 
     def test_newline_separator(self):
-        self.assertEqual(Add("1\n2,3"), 6)
+        self.assertEqual(Add("1\n2,4"), 6)
 
     def test_invalid_separator_sequence(self):
         with self.assertRaises(ValueError):
